@@ -14,6 +14,7 @@ from infra.MNISTDatasetModule import MNISTDataset
 from models.model_1 import MNISTModel_V1
 from models.model_2 import MNISTModel_V2
 from models.model_3 import MNISTModel_V3
+from models.model_4 import MNISTModel_V4
 
 from Trainer import MNISTTrainer
 
@@ -45,6 +46,9 @@ model2 = MNISTModel_V2(1, 10)
 model2 = model2.to(device)
 
 model3 = MNISTModel_V3(1, 10)
+model3 = model3.to(device)
+
+model3 = MNISTModel_V4(1, 10)
 model3 = model3.to(device)
 
 import torchinfo
