@@ -6,7 +6,7 @@ import torch
 from torch.utils.data import DataLoader
 from torchvision import transforms
 
-from MNISTDataset import MNISTDataset
+from infra.MNISTDatasetModule import MNISTDataset
 
 class MNISTDataLoader():
 

@@ -1,5 +1,5 @@
 from torch import nn
-from ResidualBlock import ResidualBlock
+from .ResidualBlockModule import ResidualBlock
 
 class MNISTModel_V2(nn.Module):
   """
