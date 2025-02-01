@@ -1,34 +1,12 @@
 from torch import nn
+from ResidualBlock import ResidualBlock
 
-class ResidualBlock(nn.Module):
+class MNISTModel_V2(nn.Module):
   """
   Desc: Improved on Model_1 by adding ResNets, and similar MLP Classifier Head
 
   Accuracy Achieved(Test Accuracy): 99.207%
   """
-  def __init__(self, size):
-    super().__init__()
-
-    self.Conv_Block_1 = nn.Sequential(
-        nn.Conv2d(size, size, kernel_size=3, stride=1, padding=1),
-        nn.BatchNorm2d(size),
-        nn.ReLU()
-    )
-
-    self.Conv_Block_2 = nn.Sequential(
-        nn.Conv2d(size, size, kernel_size=3, stride=1, padding=1),
-        nn.BatchNorm2d(size),
-        nn.ReLU()
-    )
-
-  def forward(self, x):
-    cb1 = self.Conv_Block_1(x)
-    cb2 = self.Conv_Block_2(cb1)
-    return x + cb2
-
-
-
-class MNISTModel_V2(nn.Module):
   def __init__(self, input_size, num_classes):
     super().__init__()
     self.channels = 128
