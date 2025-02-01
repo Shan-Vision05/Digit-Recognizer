@@ -28,7 +28,7 @@ class ResidualBlock(nn.Module):
 
 
 
-class MNISTModel_V7(nn.Module):
+class MNISTModel_V2(nn.Module):
   def __init__(self, input_size, num_classes):
     super().__init__()
     self.channels = 128
